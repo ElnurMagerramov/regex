@@ -1,142 +1,140 @@
 # Regular expression syntax cheatsheet
-###### [Qaydalı ifadələrdə sintaksis hiylələri](https://regexr.com/)
+###### Regular Expression Syntax Cheat Sheet
 
 <table style="width: 100%">
 <tbody>
 <tr>
 <th>Element</th>
-<th>Qısa izahı</th>
+<th>Short Description</th>
 </tr>
 <tr>
 <td>\</td>
-<td>Xüsusi simvolları adi simvol kimi icra edilməyə məcbur edir</td>
+<td>Forces special characters to be treated as ordinary characters</td>
 </tr>
 <tr>
 <td>^</td>
-<td>Şablonun başlanğıcı göstərir(yəni ilk simvoldan yoxlamağa məcbur edir)</td>
+<td>Indicates the beginning of the pattern (i.e., forces checking from the first character)</td>
 </tr>
 <tr>
 <td>$</td>
-<td>Şablonun bitişini göstərir(yəni son simvoladək yoxlamağa məcbur edir)</td>
+<td>Indicates the end of the pattern (i.e., forces checking until the last character)</td>
 </tr>
 <tr>
 <td>*</td>
-<td>Özündən əvvəlki simvol və ya qrupun heç olmaması və ya 1/və birdən çox olduğu hallarda istifadə edilir</td>
+<td>Used when the preceding character or group may occur zero or more times</td>
 </tr>
 <tr>
 <td>+</td>
-<td>Özündən əvvəlki simvol və ya qrupun bir və ya birdən çox olduğu hallarda istifadə edilir</td>
+<td>Used when the preceding character or group may occur one or more times</td>
 </tr>
 <tr>
 <td>?</td>
-<td>Özündən əvvəlki simvol və ya qrupun heç olmaması və ya bir dəfə olduğu hallarda istifadə edilir</td>
+<td>Used when the preceding character or group may occur zero or one time</td>
 </tr>
 <tr>
 <td>.</td>
-<td>Hər hansı "bir" simvolu təmsil edir</td>
+<td>Represents any single character</td>
 </tr>
 <tr>
 <td>[abc]</td>
-<td>Transkripsiyaların içində olan hər hansı "bir" simvolu təmsil edir</td>
+<td>Represents any single character within the brackets</td>
 </tr>
 <tr>
 <td>[^abc]</td>
-<td>Transkripsiyaların içində olmayan hər hansı "bir" simvolu təmsil edir</td>
+<td>Represents any single character not within the brackets</td>
 </tr>
 <tr>
 <td>[a-z]</td>
-<td>Transkripsiyada olan intervala daxil olan hər hansı "bir" simvolu təmsil edir</td>
+<td>Represents any single character within the specified range</td>
 </tr>
 <tr>
 <td>[^a-z]</td>
-<td>Transkripsiyada olan intervala daxil olmayan hər hansı "bir" simvolu təmsil edir</td>
+<td>Represents any single character not within the specified range</td>
 </tr>
 <tr>
 <td>x|y</td>
-<td>"x" və "y" simvollarından birini təmsil edir </td>
+<td>Represents either "x" or "y"</td>
 </tr>
 <tr>
 <td>(pattern)</td>
-<td>Qrupu təmsil edir</td>
+<td>Represents a group</td>
 </tr>
 <tr>
 <td>(?&lt;name&gt;pattern)</td>
-<td>Adlı qrup yaradır</td>
+<td>Creates a named group</td>
 </tr>
 <tr>
 <td>{n}</td>
-<td>Özündən əvvəlki simvol və ya qrupun "n" dəfə təkrar olduğu halları təmsil edir</td>
+<td>Represents when the preceding character or group occurs exactly "n" times</td>
 </tr>
 <tr>
 <td>{n,}</td>
-<td>Özündən əvvəlki simvol və ya qrupun "n" və ya daha çox dəfə təkrar olduğu halları təmsil edir</td>
+<td>Represents when the preceding character or group occurs "n" or more times</td>
 </tr>
 <tr>
 <td>{n,m}</td>
-<td>Özündən əvvəlki simvol və ya qrupun ən az "n" ,ən çox "m" dəfə təkrar olduğu halları təmsil edir</td>
+<td>Represents when the preceding character or group occurs at least "n" and at most "m" times</td>
 </tr>
 <tr>
 <td>(?=…)</td>
-<td>Positive lookahead (axtarış tabe olan mətndə mütləq olması lazım olan simvol və ya mətnin olmasını tələb edir)</td>
+<td>Positive lookahead (requires a specific character or text to be present in the search context)</td>
 </tr>
 <tr>
 <td>(?!…)</td>
-<td>Negative lookahead (axtarış tabe olan mətndə mütləq olması lazım olan simvol və ya mətnin olmamasını tələb edir)</td>
+<td>Negative lookahead (requires a specific character or text to be absent in the search context)</td>
 </tr>
 <tr>
 <td>(?&lt;!-)\d</td>
-<td>Negative lookahead (Qarşısında "mənfi" işarəsi olmayan bir rəqəmi təmsil edir)</td>
+<td>Negative lookahead (Represents a digit not preceded by a negative sign)</td>
 </tr>
 <tr>
 <td>(?&lt;=-)\d</td>
-<td>Positive lookahead (Qarşısında "mənfi" işarəsi olan bir rəqəmi təmsil edir)</td>
+<td>Positive lookahead (Represents a digit preceded by a negative sign)</td>
 </tr>
 <tr>
 <td>\b</td>
-<td>Sözün başlanğıc və bitiş səddini təmsil edir</td>
+<td>Represents the boundary between a word character and a non-word character</td>
 </tr>
 <tr>
 <td>\B</td>
-<td>Sözün başlanğıc və bitiş səddini təmsil etmədən söz daxilində axtarışı təmsil edir</td>
+<td>Represents a position that is not a word boundary</td>
 </tr>
 <tr>
 <td>\d</td>
-<td>Bir rəqəmi təmsil edir</td>
+<td>Represents a digit</td>
 </tr>
 <tr>
 <td>\D</td>
-<td>Rəqəm olmayan bir simvolu təmsil edir</td>
+<td>Represents a non-digit character</td>
 </tr>
 <tr>
 <td>\n  or \r\n</td>
-<td>Yeni sətr təmsil edir</td>
+<td>Represents a new line</td>
 </tr>
 <tr>
 <td>\s</td>
-<td>Bir boşluq simvolunu təmsil edir</td>
+<td>Represents a whitespace character</td>
 </tr>
 <tr>
 <td>\S</td>
-<td>Boşluq olmayan simvolu təmsil edir</td>
+<td>Represents a non-whitespace character</td>
 </tr>
 <tr>
 <td>\t</td>
-<td>Bir tab təmsil edir</td>
+<td>Represents a tab</td>
 </tr>
 <tr>
 <td>\w</td>
-<td>Mətn simvollarını təmsil edir, "_" daxil olmaqla.Dİgər simvollara uyğunlaşmır</td>
+<td>Represents a word character, including "_" but excluding other symbols</td>
 </tr>
 <tr>
 <td>\W</td>
-<td>Mətn simvollarından fərqli simvolları təmsil edir, "_" daxil deyil.Digər simvollara uyğunlaşmır</td>
+<td>Represents a non-word character, excluding "_" but including other symbols</td>
 </tr>
 </tbody>
 </table>
 
-
-
-<h2>Top 5 Regular Expression</h2>
+<h2>Top 5 Regular Expressions</h2>
 <table style="width: 100%">
     <tbody>
         <tr><th>Email</th></tr>
